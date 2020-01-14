@@ -1,4 +1,22 @@
 from setuptools import setup, find_packages
+from setuptools.command.develop import develop
+from setuptools.command.install import install
+from subprocess import check_call
+
+
+class PostDevelopCommand(develop):
+    """Post-installation for development mode."""
+    def run(self):
+        # PUT YOUR POST-INSTALL SCRIPT HERE or CALL A FUNCTION
+        develop.run(self)
+
+class PostInstallCommand(install):
+    """Post-installation for installation mode."""
+    def run(self):
+        # PUT YOUR POST-INSTALL SCRIPT HERE or CALL A FUNCTION
+        check_call('python -m spacy download en')
+        check_call('python -m spacy download es')
+        install.run(self)
 
 import os
 thelibFolder = os.path.dirname(os.path.realpath(__file__))
