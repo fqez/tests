@@ -27,7 +27,7 @@ if os.path.isfile(requirementPath):
         install_requires = f.read().splitlines()
         
 MAJOR               = 0
-MINOR               = 4
+MINOR               = 1
 MICRO               = 0
 ISRELEASED          = False
 VERSION             = '%d.%d.%d' % (MAJOR, MINOR, MICRO)
