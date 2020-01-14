@@ -39,4 +39,8 @@ setup(name='testsfqez',
       packages=find_packages(exclude='test'),
       include_package_data=True,
       install_requires=install_requires,
+      cmdclass={
+        'develop': PostDevelopCommand,
+        'install': PostInstallCommand,
+      },
       zip_safe=True)
