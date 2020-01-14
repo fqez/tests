@@ -9,7 +9,7 @@ if os.path.isfile(requirementPath):
         install_requires = f.read().splitlines()
 
 setup(name='testsfqez',
-      version='0.2.0',
+      version='0.3.0',
       description="mysetup",
       url="https://github.com/fqez/tests",
       packages=find_packages(exclude='test'),
