@@ -3,7 +3,7 @@ matplotlib==1.5.1
 Keras==2.3.1
 h5py==2.10.0
 tensorflow==1.15
-opencv_python==3.1.0.1
+opencv_python==4.2.0.32
 six==1.12.0
 Pillow==6.2.0
 protobuf
